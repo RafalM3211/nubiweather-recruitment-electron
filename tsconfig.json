@@ -13,7 +13,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["vitest/globals", "vite/client", "@testing-library/jest-dom"]
   },
-  "include": ["src"]
+  "include": [
+    "src", 
+    "vitest.config.ts",
+    "vite.*.config.mjs",
+    "forge.config.ts"
+  ]
 }
