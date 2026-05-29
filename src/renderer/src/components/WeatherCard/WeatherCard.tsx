@@ -68,7 +68,7 @@ export default function WeatherCard(props: Props) {
                 height: "min(140px, 23vw)",
                 width: "min(140px, 23vw)",
               }}
-              image={cardData.icon?.replace("64x64", "128x128")}
+              image={`https://${cardData.icon?.replace("64x64", "128x128").replace(/^\/\//, "")}`}
               title="Icon illustrating current weather"
             />
             <CardContent sx={{ display: "flex", gap: "1rem", px: "0.1rem" }}>

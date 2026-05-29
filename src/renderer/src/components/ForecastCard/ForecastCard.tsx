@@ -31,7 +31,7 @@ export default function ForecastCard(props: Props) {
       </Typography>
       <CardMedia
         sx={{ height: 35, width: 40 }}
-        image={props.icon}
+        image={`https://${props.icon?.replace(/^\/\//, "")}`}
         title={`Icon illustrating ${convertDateToWeekDay(props.date)} weather`}
       />
       <Typography sx={{ py: "5px" }} variant="body2">

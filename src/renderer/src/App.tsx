@@ -13,6 +13,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AppThemeProvider>
         <Box
+          style={{
+            backgroundImage: `url("${nubisoftBgLogo}")`,
+          }}
           sx={{
             width: "100vw",
             height: "100vh",
@@ -20,8 +23,7 @@ function App() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-
-            background: `url(${nubisoftBgLogo}) no-repeat`,
+            backgroundRepeat: "no-repeat",
             backgroundPosition: { xs: "-50vw 10vh", sm: "-10vw 15vh" },
             backgroundSize: { xs: "cover", sm: "contain" },
           }}

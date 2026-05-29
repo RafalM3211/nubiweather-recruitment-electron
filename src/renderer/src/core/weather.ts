@@ -2,8 +2,6 @@ import { QueryFunctionContext } from "@tanstack/react-query";
 import type { ForecastData, CurrentDay } from "../types/weather";
 import { apiKey } from "../env";
 
-console.log(apiKey)
-
 interface QueryParams{
     q: string;
     [param: string]: string|number;
