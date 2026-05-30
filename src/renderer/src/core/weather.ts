@@ -6,7 +6,13 @@ export async function getCurrentWeather(
 ): Promise<CurrentDay> {
   const location = queryContext.queryKey[1];
 
-  return await window.weatherAPI.getCurrentWeather(location);
+  const result = await window.weatherAPI.getCurrentWeather(location);
+
+  if (!result.success) {
+    throw new Error(result.error); 
+  }
+
+  return result.data;
 }
 
 export async function getForecastWeather(
@@ -14,5 +20,11 @@ export async function getForecastWeather(
 ): Promise<ForecastData> {
   const location = queryContext.queryKey[1];
   
-  return await window.weatherAPI.getForecastWeather(location);
+  const result = await window.weatherAPI.getForecastWeather(location);
+
+  if (!result.success) {
+    throw new Error(result.error); 
+  }
+
+  return result.data;
 }
