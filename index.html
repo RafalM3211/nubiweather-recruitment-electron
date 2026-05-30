@@ -2,7 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.weatherapi.com; 
+        connect-src 'self' ws://localhost:*;"
+    />
+    <title>Nubiweather electron</title>
 
   </head>
   <body>
