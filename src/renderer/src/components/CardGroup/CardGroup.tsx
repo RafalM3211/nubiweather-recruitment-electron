@@ -22,6 +22,7 @@ export default function CardGroup(props: Props) {
 
   useEffect(() => {
     if (!isLoading && data) {
+      if(!data.forecast.forecastday[0]) throw new Error("Forecast data empty")
       setSelectedDay(data.forecast.forecastday[0]);
     }
   }, [data, isLoading, setSelectedDay]);
