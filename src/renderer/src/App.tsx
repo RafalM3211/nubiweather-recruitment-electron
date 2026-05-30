@@ -28,18 +28,22 @@ function App() {
             backgroundSize: { xs: "cover", sm: "contain" },
           }}
         >
-          <Container maxWidth="lg">
+          <Container maxWidth="lg"
+            sx={{
+              height: "100vh",
+              overflow: "scroll"
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "2em",
+                mt: "1em"
               }}
             >
-              <Link
-                href="https://nubisoft.io/"
-                target="_blank"
+              <Box
                 sx={{
                   display: "block",
                   width: { xs: "17vw", sm: "fit-content" },
@@ -51,7 +55,7 @@ function App() {
                   className=""
                   alt="Nubisoft logo"
                 />
-              </Link>
+              </Box>
               <Typography variant="h2" component="h1">
                 NubiWeather
               </Typography>

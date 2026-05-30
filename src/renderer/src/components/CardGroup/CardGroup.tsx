@@ -37,7 +37,7 @@ export default function CardGroup(props: Props) {
     }
   }
   return (
-    <Box sx={{ width: "69vw", maxWidth: "26rem", minHeight: "220px" }}>
+    <Box sx={{ width: "68vw", maxWidth: "26rem", minHeight: "220px" }}>
       {isLoading || !selectedDay ? (
         <Loader text={`Loading weather for ${props.location}...`} />
       ) : (
