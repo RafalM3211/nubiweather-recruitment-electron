@@ -36,11 +36,8 @@ export function registerWeatherHandlers() {
 
   ipcMain.handle('get-forecast-weather', async (event, location: string) => {
     try {
-      console.log('Invoke fprecasrt' + location)
       const url = buildFetchURL("forecast.json", { q: location, days: 5, aqi: "no", alerts: "no" });
       const response = await fetch(url);
-
-      console.log('return fprecasrt' + location)
       
       if (!response.ok) {
         const error = "Failed to retrieve forecast.";
